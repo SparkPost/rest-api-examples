@@ -18,7 +18,8 @@ ORGANIZATION_ID = get_or_throw("TS_ORGANIZATION_ID")
 API_KEY = get_or_throw("TS_API_KEY")
 
 BASE_PATH = 'https://' + HOST
-URI_PATH = '/help/hawk/self-test'
+URI_PATH = sys.argv[1]
+
 
 credentials = {
     'id': USER_ID,
@@ -40,4 +41,3 @@ sender.accept_response(response.headers['Server-Authorization'],
 
 # accept_response will throw if the response is not authentic
 # after this call we know the response is authentic
-print('Response is authentic')

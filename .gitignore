@@ -3,3 +3,4 @@
 **/target/
 **/sample_env/
 **/node_modules/
+python/.virtenv
